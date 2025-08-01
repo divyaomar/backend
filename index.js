@@ -1,7 +1,9 @@
+//after creating server instatiate it
 const express = require("express");
 const app = express();
 
 // load config from env file
+//
 require("dotenv").config();
 const PORT = process.env.PORT || 4000;
 
@@ -12,7 +14,7 @@ app.use(express.json());
 // import router for todo api
 const todoRoutes = require("./routes/todos");
 // mount the toso api routes
-app.use("/api/v1", todoRoutes);
+app.use("/api/v1", todoRoutes);  
 
 //start server
 
